@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>
+                Product id
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Category
+            </th>
+            <th>
+                Price
+            </th>
+            <th>
+                Stock
+            </th>
+            <th>
+                Action
+            </th>
+        </tr>
+        <% data.map((ls)=>{ %>
+            <tr>
+                <td>
+                    <%= ls.prd_id %>
+                </td>
+                <td>
+                    <%= ls.pname %>
+                </td>
+                <td>
+                    <%= ls.category %>
+                </td>
+                <td>
+                    <%= ls.price %>
+                </td>
+                <td>
+                    <%= ls.stock %>
+                </td>
+                <td>
+                    <a href="/product/delt/<%= ls.prd_id %>">
+                        Delete
+                    </a>
+                </td>
+            </tr>
+            
+            <% }) %>
+    </table>
+</body>
+</html>
